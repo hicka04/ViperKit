@@ -9,4 +9,9 @@ import Foundation
 
 public protocol Presentation: AnyObject {
     
+    associatedtype Event: ViewEvent
+    
+    func recieve(_ event: Event)
 }
+
+public protocol ViewEvent {}

@@ -9,4 +9,9 @@ import Foundation
 
 public protocol Wireframe: AnyObject {
     
+    associatedtype Destination: ViperKit.Destination
+    
+    func navigate(to destination: Destination)
 }
+
+public protocol Destination {}
